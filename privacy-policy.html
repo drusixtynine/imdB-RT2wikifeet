@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IMDb/RT to Wikifeet Privacy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,800&display=swap">
+<style>
+  :root {
+    --bg: #f7f6fa;
+    --surface: #ffffff;
+    --text: #23212b;
+    --muted: #5d5a6b;
+    --line: #e2dfea;
+    --blue: #2f7fb0;
+    --pink: #b83c83;
+    --ok-bg: #e9f4ee;
+    --ok-text: #1f6b43;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --bg: #17161c;
+      --surface: #201f27;
+      --text: #ecebf2;
+      --muted: #a7a4b6;
+      --line: #34323f;
+      --blue: #6db5e0;
+      --pink: #e27bb8;
+      --ok-bg: #1d3328;
+      --ok-text: #8fd6ae;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #17161c;
+    --surface: #201f27;
+    --text: #ecebf2;
+    --muted: #a7a4b6;
+    --line: #34323f;
+    --blue: #6db5e0;
+    --pink: #e27bb8;
+    --ok-bg: #1d3328;
+    --ok-text: #8fd6ae;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 17px/1.65 "Nunito Sans", "Helvetica Neue", Arial, sans-serif;
+    padding: 0 20px;
+    padding-block: 48px 64px;
+  }
+  main { max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
+
+  header { display: flex; flex-direction: column; gap: 8px; }
+  .eyebrow {
+    font-size: 13px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
+    background: linear-gradient(90deg, var(--blue), var(--pink));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  h1 { font-size: 34px; line-height: 1.15; font-weight: 800; margin: 0; text-wrap: balance; }
+  .updated { color: var(--muted); font-size: 15px; margin: 0; }
+
+  .summary {
+    background: var(--ok-bg); color: var(--ok-text);
+    border-radius: 12px; padding: 18px 20px; font-weight: 600; margin: 0;
+  }
+
+  section { display: flex; flex-direction: column; gap: 10px; border-top: 1px solid var(--line); padding-top: 24px; }
+  h2 { font-size: 21px; font-weight: 800; margin: 0; text-wrap: balance; }
+  p, ul { margin: 0; }
+  ul { padding-left: 22px; display: flex; flex-direction: column; gap: 6px; }
+  strong { font-weight: 800; }
+  a { color: var(--blue); }
+  a:focus-visible { outline: 2px solid var(--pink); outline-offset: 2px; border-radius: 2px; }
+  code { font-size: 0.92em; background: var(--surface); border: 1px solid var(--line); border-radius: 5px; padding: 1px 5px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <span class="eyebrow">Chrome extension</span>
+    <h1>IMDb/Rotten Tomatoes to Wikifeet: Privacy Policy</h1>
+    <p class="updated">Last updated: September 27, 2026</p>
+  </header>
+
+  <p class="summary">This extension does not collect, store on any server, sell or share any personal data. It has no account, no analytics and no tracking.</p>
+
+  <section>
+    <h2>What the extension does</h2>
+    <p>On actress, movie and series pages of IMDb (<code>imdb.com</code>) and Rotten Tomatoes (<code>rottentomatoes.com</code>), the extension shows the wikifeet rating next to each actress's name. Clicking the toolbar icon or a rating opens the matching page on <code>wikifeet.com</code>.</p>
+  </section>
+
+  <section>
+    <h2>Information it reads</h2>
+    <ul>
+      <li><strong>Names shown on the page.</strong> The extension reads the names of the people listed on IMDb and Rotten Tomatoes pages you visit.</li>
+      <li><strong>The current tab's title</strong>, only when you click the toolbar icon, to build the wikifeet link.</li>
+    </ul>
+    <p>It does not read your browsing history, forms, passwords, cookies, or any page outside IMDb and Rotten Tomatoes.</p>
+  </section>
+
+  <section>
+    <h2>Information sent elsewhere</h2>
+    <p>To get a rating, the extension requests the public wikifeet page for that name (for example <code>https://www.wikifeet.com/Jane_Doe</code>). The only information in that request is the person's name, as it appears on the public IMDb or Rotten Tomatoes page. As with any web request, wikifeet.com receives your IP address and browser details; its own privacy policy applies to that.</p>
+    <p>Nothing is sent to the developer or to any other server.</p>
+  </section>
+
+  <section>
+    <h2>Information stored on your device</h2>
+    <p>Ratings are cached in your browser's local extension storage for 7 days, so pages load faster and wikifeet is not queried repeatedly. The cache contains only names, ratings and wikifeet links. It never leaves your device and is deleted when you remove the extension.</p>
+  </section>
+
+  <section>
+    <h2>Permissions</h2>
+    <ul>
+      <li><strong>activeTab</strong>: read the current tab's title when you click the icon.</li>
+      <li><strong>declarativeContent</strong>: enable the icon only on actor pages.</li>
+      <li><strong>storage</strong>: keep the local rating cache described above.</li>
+      <li><strong>Access to imdb.com, rottentomatoes.com and wikifeet.com</strong>: display ratings on IMDb and Rotten Tomatoes, and fetch them from wikifeet.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Changes and contact</h2>
+    <p>If this policy changes, the updated version will be posted on this page with a new date. For questions, use the support contact on the extension's Chrome Web Store page.</p>
+  </section>
+</main>
+</body>
+</html>
